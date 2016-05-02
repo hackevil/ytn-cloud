@@ -23,7 +23,7 @@ var async = require('async')
 var TimSort = require('timsort');
 
 /* Google Youtube API Key. Recommended: Register with Google for a unique key */
-const APIKEY = "AIzaSyB1OOSpTREs85WUMvIgJvLTZKye4BVsoFU" 
+const APIKEY = "AIzaSyB69I-QJx2Zrc-oHuP26tQeHvUYlsTxnu4" 
 
 /* Setup Youtube Internal Engine */
 var ytdl = require('ytdl-core')
@@ -285,4 +285,4 @@ function numberWithCommas(x) { return x.toString().replace(numCommaRegEx, ",") }
 /* Regular Expression to formalize ISO 8601 string into H:M:S */
 function parseDuration(e){var n=e.replace(/D|H|M/g,":").replace(/P|T|S/g,"").split(":");if(1==n.length)2!=n[0].length&&(n[0]="0"+n[0]),n[0]="0:"+n[0];else for(var l=1,r=n.length-1;r>=l;l++)2!=n[l].length&&(n[l]="0"+n[l],2!=n[l].length&&(n[l]="0"+n[l]));return n.join(":")}
 
-server.listen(process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || '8000', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1')
+server.listen(process.env.PORT || '8000')
